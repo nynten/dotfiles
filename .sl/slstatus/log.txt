@@ -1,0 +1,167 @@
+rm -f slstatus slstatus.o components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o
+gcc -o slstatus.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os slstatus.c
+gcc -o components/battery.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/battery.c
+gcc -o components/cpu.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/cpu.c
+gcc -o components/datetime.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/datetime.c
+gcc -o components/disk.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/disk.c
+gcc -o components/entropy.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/entropy.c
+gcc -o components/hostname.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/hostname.c
+gcc -o components/ip.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/ip.c
+gcc -o components/kernel_release.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/kernel_release.c
+gcc -o components/keyboard_indicators.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/keyboard_indicators.c
+gcc -o components/keymap.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/keymap.c
+gcc -o components/load_avg.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/load_avg.c
+gcc -o components/netspeeds.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/netspeeds.c
+gcc -o components/num_files.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/num_files.c
+gcc -o components/ram.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/ram.c
+gcc -o components/run_command.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/run_command.c
+gcc -o components/swap.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/swap.c
+gcc -o components/temperature.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/temperature.c
+gcc -o components/uptime.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/uptime.c
+gcc -o components/user.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/user.c
+gcc -o components/volume.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/volume.c
+gcc -o components/wifi.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/wifi.c
+gcc -o util.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os util.c
+gcc -o slstatus -L/usr/X11R6/lib -s components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o slstatus.o -lX11
+mkdir -p "/usr/local/bin"
+cp -f slstatus "/usr/local/bin"
+chmod 755 "/usr/local/bin/slstatus"
+mkdir -p "/usr/local/share/man/man1"
+cp -f slstatus.1 "/usr/local/share/man/man1"
+chmod 644 "/usr/local/share/man/man1/slstatus.1"
+rm -f slstatus slstatus.o components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o
+gcc -o slstatus.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os slstatus.c
+rm -f slstatus slstatus.o components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o
+gcc -o slstatus.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os slstatus.c
+rm -f slstatus slstatus.o components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o
+gcc -o slstatus.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os slstatus.c
+rm -f slstatus slstatus.o components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o
+gcc -o slstatus.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os slstatus.c
+rm -f slstatus slstatus.o components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o
+gcc -o slstatus.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os slstatus.c
+rm -f slstatus slstatus.o components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o
+gcc -o slstatus.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os slstatus.c
+gcc -o components/battery.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/battery.c
+gcc -o components/cpu.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/cpu.c
+gcc -o components/datetime.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/datetime.c
+gcc -o components/disk.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/disk.c
+gcc -o components/entropy.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/entropy.c
+gcc -o components/hostname.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/hostname.c
+gcc -o components/ip.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/ip.c
+gcc -o components/kernel_release.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/kernel_release.c
+gcc -o components/keyboard_indicators.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/keyboard_indicators.c
+gcc -o components/keymap.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/keymap.c
+gcc -o components/load_avg.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/load_avg.c
+gcc -o components/netspeeds.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/netspeeds.c
+gcc -o components/num_files.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/num_files.c
+gcc -o components/ram.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/ram.c
+gcc -o components/run_command.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/run_command.c
+gcc -o components/swap.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/swap.c
+gcc -o components/temperature.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/temperature.c
+gcc -o components/uptime.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/uptime.c
+gcc -o components/user.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/user.c
+gcc -o components/volume.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/volume.c
+gcc -o components/wifi.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/wifi.c
+gcc -o util.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os util.c
+gcc -o slstatus -L/usr/X11R6/lib -s components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o slstatus.o -lX11
+mkdir -p "/usr/local/bin"
+cp -f slstatus "/usr/local/bin"
+chmod 755 "/usr/local/bin/slstatus"
+mkdir -p "/usr/local/share/man/man1"
+cp -f slstatus.1 "/usr/local/share/man/man1"
+chmod 644 "/usr/local/share/man/man1/slstatus.1"
+rm -f slstatus slstatus.o components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o
+gcc -o slstatus.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os slstatus.c
+rm -f slstatus slstatus.o components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o
+gcc -o slstatus.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os slstatus.c
+gcc -o components/battery.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/battery.c
+gcc -o components/cpu.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/cpu.c
+gcc -o components/datetime.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/datetime.c
+gcc -o components/disk.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/disk.c
+gcc -o components/entropy.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/entropy.c
+gcc -o components/hostname.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/hostname.c
+gcc -o components/ip.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/ip.c
+gcc -o components/kernel_release.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/kernel_release.c
+gcc -o components/keyboard_indicators.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/keyboard_indicators.c
+gcc -o components/keymap.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/keymap.c
+gcc -o components/load_avg.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/load_avg.c
+gcc -o components/netspeeds.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/netspeeds.c
+gcc -o components/num_files.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/num_files.c
+gcc -o components/ram.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/ram.c
+gcc -o components/run_command.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/run_command.c
+gcc -o components/swap.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/swap.c
+gcc -o components/temperature.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/temperature.c
+gcc -o components/uptime.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/uptime.c
+gcc -o components/user.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/user.c
+gcc -o components/volume.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/volume.c
+gcc -o components/wifi.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/wifi.c
+gcc -o util.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os util.c
+gcc -o slstatus -L/usr/X11R6/lib -s components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o slstatus.o -lX11
+mkdir -p "/usr/local/bin"
+cp -f slstatus "/usr/local/bin"
+chmod 755 "/usr/local/bin/slstatus"
+mkdir -p "/usr/local/share/man/man1"
+cp -f slstatus.1 "/usr/local/share/man/man1"
+chmod 644 "/usr/local/share/man/man1/slstatus.1"
+rm -f slstatus slstatus.o components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o
+gcc -o slstatus.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os slstatus.c
+gcc -o components/battery.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/battery.c
+gcc -o components/cpu.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/cpu.c
+gcc -o components/datetime.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/datetime.c
+gcc -o components/disk.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/disk.c
+gcc -o components/entropy.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/entropy.c
+gcc -o components/hostname.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/hostname.c
+gcc -o components/ip.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/ip.c
+gcc -o components/kernel_release.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/kernel_release.c
+gcc -o components/keyboard_indicators.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/keyboard_indicators.c
+gcc -o components/keymap.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/keymap.c
+gcc -o components/load_avg.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/load_avg.c
+gcc -o components/netspeeds.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/netspeeds.c
+gcc -o components/num_files.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/num_files.c
+gcc -o components/ram.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/ram.c
+gcc -o components/run_command.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/run_command.c
+gcc -o components/swap.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/swap.c
+gcc -o components/temperature.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/temperature.c
+gcc -o components/uptime.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/uptime.c
+gcc -o components/user.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/user.c
+gcc -o components/volume.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/volume.c
+gcc -o components/wifi.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/wifi.c
+gcc -o util.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os util.c
+gcc -o slstatus -L/usr/X11R6/lib -s components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o slstatus.o -lX11
+mkdir -p "/usr/local/bin"
+cp -f slstatus "/usr/local/bin"
+chmod 755 "/usr/local/bin/slstatus"
+mkdir -p "/usr/local/share/man/man1"
+cp -f slstatus.1 "/usr/local/share/man/man1"
+chmod 644 "/usr/local/share/man/man1/slstatus.1"
+rm -f slstatus slstatus.o components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o
+gcc -o slstatus.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os slstatus.c
+gcc -o components/battery.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/battery.c
+gcc -o components/cpu.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/cpu.c
+gcc -o components/datetime.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/datetime.c
+gcc -o components/disk.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/disk.c
+gcc -o components/entropy.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/entropy.c
+gcc -o components/hostname.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/hostname.c
+gcc -o components/ip.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/ip.c
+gcc -o components/kernel_release.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/kernel_release.c
+gcc -o components/keyboard_indicators.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/keyboard_indicators.c
+gcc -o components/keymap.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/keymap.c
+gcc -o components/load_avg.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/load_avg.c
+gcc -o components/netspeeds.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/netspeeds.c
+gcc -o components/num_files.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/num_files.c
+gcc -o components/ram.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/ram.c
+gcc -o components/run_command.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/run_command.c
+gcc -o components/swap.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/swap.c
+gcc -o components/temperature.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/temperature.c
+gcc -o components/uptime.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/uptime.c
+gcc -o components/user.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/user.c
+gcc -o components/volume.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/volume.c
+gcc -o components/wifi.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os components/wifi.c
+gcc -o util.o -c -I/usr/X11R6/include -D_DEFAULT_SOURCE -std=c99 -pedantic -Wall -Wextra -Os util.c
+gcc -o slstatus -L/usr/X11R6/lib -s components/battery.o components/cpu.o components/datetime.o components/disk.o components/entropy.o components/hostname.o components/ip.o components/kernel_release.o components/keyboard_indicators.o components/keymap.o components/load_avg.o components/netspeeds.o components/num_files.o components/ram.o components/run_command.o components/swap.o components/temperature.o components/uptime.o components/user.o components/volume.o components/wifi.o util.o slstatus.o -lX11
+mkdir -p "/usr/local/bin"
+cp -f slstatus "/usr/local/bin"
+chmod 755 "/usr/local/bin/slstatus"
+mkdir -p "/usr/local/share/man/man1"
+cp -f slstatus.1 "/usr/local/share/man/man1"
+chmod 644 "/usr/local/share/man/man1/slstatus.1"
